@@ -17,4 +17,19 @@
 
 .header__clock-container {
     padding: 1rem;
+    padding-bottom: .5rem;
+    width: 15rem;
+    float: right;
+    border-style: solid;
+    border-color: #EDEDED;
+    height: 100%;
+}
+
+.clock {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.clock__time {
+    text-align: right;
 }

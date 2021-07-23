@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { getAllLogs } from 'api/sightseeingLogs';
+import CurrentActiveList from 'components/CurrentActiveList';
 
 function Home() {
     useEffect(() => {
@@ -13,7 +14,7 @@ function Home() {
 
     return (
         <div>
-            Home
+            <CurrentActiveList />
         </div>
     )
 }

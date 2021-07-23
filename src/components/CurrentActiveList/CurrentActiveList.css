@@ -1,0 +1,14 @@
+.current-active-list {
+    border-style: solid;
+    border-color: #E7E7E7;
+    border-radius: 1rem;
+}
+
+.current-active-list__head__cell {
+    padding-right: 2.5rem;
+}
+
+.current-active-list__body__cell {
+    border-top: .1rem solid #E7E7E7;
+    border-spacing: 0;
+}

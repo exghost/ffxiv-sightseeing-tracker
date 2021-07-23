@@ -1,18 +1,17 @@
 .log-item__header {
     background-color: #DA0037;
     border-bottom: solid #E7E7E7;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .log-item__header--number {
-    display: inline-block;
     font-size: 1.5rem;
     padding-left: .5rem;
     padding-right: 1rem;
-    transform: translateY(-10%);
 }
 
 .log-item__header--name {
-    display: inline-block;
     padding: 1rem;
     font-weight: 700;
     letter-spacing: .2rem;
@@ -20,9 +19,9 @@
 }
 
 .log-item__header--location {
-    float: right;
     padding-top: 1rem;
     padding-right: 2rem;
+    margin-left: auto;
 }
 
 .log-item__header--location__zone {

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import EorzeaTime from 'eorzea-time';
 
+import LogList from 'components/LogList';
+
 import { getCurrentlyAvailableLogs } from 'api/sightseeingLogs';
 import './CurrentActiveList.css';
 
@@ -27,7 +29,16 @@ function CurrentActiveList() {
                 No available sights to see...
             </div>
         }
-        { logData.length &&
+        { !!logData.length &&
+            <LogList data={logData} />
+        }
+        </div>
+    )
+}
+
+export default CurrentActiveList;
+
+/*
         <table className="current-active-list">
             <thead className="current-active-list__head">
                 <tr className="current-active-list__head__row">
@@ -79,9 +90,4 @@ function CurrentActiveList() {
                 ))
             }
         </table>
-        }
-        </div>
-    )
-}
-
-export default CurrentActiveList;
+*/

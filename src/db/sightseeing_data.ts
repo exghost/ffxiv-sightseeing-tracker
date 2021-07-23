@@ -1,4 +1,4 @@
-{
+const data = {
     "logs": [
         {
             "number": 1,
@@ -11,8 +11,8 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "8:00",
-            "endTime": "12:00",
+            "startTime": 8,
+            "endTime": 12,
             "emote": "/lookout",
             "comment": "Located northwest out of The Bismarck, there are two sets of bricks set into the wall there. The western set of bricks is the Vista location."
         },
@@ -27,8 +27,8 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "18:00",
-            "endTime": "5:00",
+            "startTime": 18,
+            "endTime": 5,
             "emote": "/lookout",
             "comment": "Climb to the top of The Astalicia (the ship there), and go east towards the bow of the ship. Climb the pole extending from the ship and go to the very tip."
         },
@@ -42,8 +42,8 @@
             "weather": [
                 "Rain"
             ],
-            "startTime": "5:00",
-            "endTime": "8:00",
+            "startTime": 5,
+            "endTime": 8,
             "emote": "/pray",
             "comment": "In the Seasong Grotto, by the entrance."
         },
@@ -58,8 +58,8 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "12:00",
-            "endTime": "17:00",
+            "startTime": 12,
+            "endTime": 17,
             "emote": "/lookout",
             "comment": "By the Skylift, overlooking the pier."
         },
@@ -73,8 +73,8 @@
             "weather": [
                 "Clouds"
             ],
-            "startTime": "8:00",
-            "endTime": "12:00",
+            "startTime": 8,
+            "endTime": 12,
             "emote": "/lookout",
             "comment": "Looking at the gate into Lower La Noscea, go up the stairs on the right hand side and jump up onto the fence immediately to the left. The vista is on the fencepost closest to the stairs."
         },
@@ -89,8 +89,8 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "18:00",
-            "endTime": "5:00",
+            "startTime": 18,
+            "endTime": 5,
             "emote": "/lookout",
             "comment": "Jump onto the base of the rock near the cliff west of the farmer's house."
         },
@@ -104,8 +104,8 @@
             "weather": [
                 "Fog"
             ],
-            "startTime": "5:00",
-            "endTime": "8:00",
+            "startTime": 5,
+            "endTime": 8,
             "emote": "/lookout",
             "comment": "Jump on the top of the gate structure for the portal that leads to The Mist."
         },
@@ -120,8 +120,8 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "5:00",
-            "endTime": "8:00",
+            "startTime": 5,
+            "endTime": 8,
             "emote": "/lookout",
             "comment": "Go behind the lighthouse on the left side. The vista is located where the wooden barrier and the lighthouse's wall meet."
         },
@@ -135,8 +135,8 @@
             "weather": [
                 "Clouds"
             ],
-            "startTime": "12:00",
-            "endTime": "17:00",
+            "startTime": 12,
+            "endTime": 17,
             "emote": "/lookout",
             "comment": "From inside the guild you go up the steps in the back, jump on the table against the right wall, jump again to get onto the higher shelf. Face the room and use /lookout."
         },
@@ -151,8 +151,8 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "18:00",
-            "endTime": "5:00",
+            "startTime": 18,
+            "endTime": 5,
             "emote": "/lookout",
             "comment": "Near Apkallu Falls, there are 3 lamp posts. You have to climb onto the cliff on the southeast and from there use sprint and jump onto the top of the lamp post closest to the waterfall. The lamp post lights must be on for it to complete (after sunset)."
         },
@@ -167,8 +167,8 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "12:00",
-            "endTime": "17:00",
+            "startTime": 12,
+            "endTime": 17,
             "emote": "/sit",
             "comment": "The Vista is right next to the Aetheryte. There are three stumps across the Moogle mail carrier. A woman is sitting on the first one. Hop up onto the third one to reach the Vista."
         },
@@ -183,8 +183,8 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "8:00",
-            "endTime": "12:00",
+            "startTime": 8,
+            "endTime": 12,
             "emote": "/pray",
             "comment": "At the entrance to the chamber to the garden around the Sanctum of the Twelve."
         },
@@ -199,8 +199,8 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "18:00",
-            "endTime": "5:00",
+            "startTime": 18,
+            "endTime": 5,
             "emote": "/lookout",
             "comment": "Just behind the Sylph Vendor NPC, on the top of the tree branch extending from the quest NPC platform."
         },
@@ -215,8 +215,8 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "5:00",
-            "endTime": "8:00",
+            "startTime": 5,
+            "endTime": 8,
             "emote": "/salute",
             "comment": "There are three silver squares in front of the Royal Promenade (players can get there from the Chamber of Rule Aetheryte Shard). The Vista is on the tip of the triangle. Face the stairs and guards then use /salute."
         },
@@ -230,8 +230,8 @@
             "weather": [
                 "Clouds"
             ],
-            "startTime": "12:00",
-            "endTime": "17:00",
+            "startTime": 12,
+            "endTime": 17,
             "emote": "/lookout",
             "comment": "Jump from Hustings Strip balcony down onto the eastern-most lamp."
         },
@@ -246,8 +246,8 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "18:00",
-            "endTime": "5:00",
+            "startTime": 18,
+            "endTime": 5,
             "emote": "/lookout",
             "comment": "Use your mount and jump from the boulder to the awning (the cloth roof) at the beginning of the staircase."
         },
@@ -261,8 +261,8 @@
             "weather": [
                 "Fog"
             ],
-            "startTime": "8:00",
-            "endTime": "12:00",
+            "startTime": 8,
+            "endTime": 12,
             "emote": "/lookout",
             "comment": "About half way down the cliff, where the cliff meets the creek."
         },
@@ -277,8 +277,8 @@
                 "Rain",
                 "Showers"
             ],
-            "startTime": "17:00",
-            "endTime": "18:00",
+            "startTime": 17,
+            "endTime": 18,
             "emote": "/comfort",
             "comment": "It is located under the base of the tree clump across from the Goobbue."
         },
@@ -292,8 +292,8 @@
             "weather": [
                 "Clouds"
             ],
-            "startTime": "8:00",
-            "endTime": "12:00",
+            "startTime": 8,
+            "endTime": 12,
             "emote": "/lookout",
             "comment": "At the tip of the ruin/roof that overlooks the area."
         },
@@ -308,10 +308,12 @@
                 "Clear Skies",
                 "Fair Skies"
             ],
-            "startTime": "5:00",
-            "endTime": "8:00",
+            "startTime": 5,
+            "endTime": 8,
             "emote": "/pray",
             "comment": "The Vista is on the small platform that sticks out from underneath the north side of the bridge. It is closest to the NPC located in the carved area on the side of the canyon."
         }
     ]
 }
+
+export default data;

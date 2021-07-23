@@ -12,7 +12,7 @@ function CurrentActiveList() {
         setInterval(() => {
             let hour = new EorzeaTime().getHours();
             if(hour !== currentHour) setCurrentHour(hour);
-        }, 1000);
+        }, 60000);
     }, [])
 
     useEffect(() => {
@@ -20,6 +20,14 @@ function CurrentActiveList() {
     }, [currentHour]);
 
     return (
+        <div>
+        {
+            !logData.length &&
+            <div>
+                No available sights to see...
+            </div>
+        }
+        { logData.length &&
         <table className="current-active-list">
             <thead className="current-active-list__head">
                 <tr className="current-active-list__head__row">
@@ -49,8 +57,7 @@ function CurrentActiveList() {
                     </td>
                 </tr>
             </thead>
-            { logData && 
-                logData.map((log) => (
+            { logData.map((log) => (
                     <tr key={log.number} className="current-active-list__body__row">
                         <td className="current-active-list__body__cell">{log.number}</td>
                         <td className="current-active-list__body__cell">{log.name}</td>
@@ -72,6 +79,8 @@ function CurrentActiveList() {
                 ))
             }
         </table>
+        }
+        </div>
     )
 }
 

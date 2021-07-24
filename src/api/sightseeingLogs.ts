@@ -23,7 +23,6 @@ export function getCurrentlyAvailableLogs(): any[] {
 
     const currentLogsByTimeAndWeather = currentLogsByTime.filter(({ weatherZone, weather }) => {
         let currentWeather = EorzeaWeather.getWeather(weatherZone, new Date());
-        console.log(weatherZone, currentWeather);
 
         return weather.includes(currentWeather);
     });

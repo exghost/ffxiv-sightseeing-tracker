@@ -2,7 +2,11 @@ import React from 'react';
 
 import './styles.css';
 
-function RoundedToggle({ id, isOn, handleToggle }: { id: string, isOn: boolean, handleToggle: any }) {
+
+function RoundedToggle(
+    { id, isOn, handleToggle }: 
+    { id: string, isOn: boolean, handleToggle: () => void}
+) {
     return (
         <div className="toggle">
             <input 
@@ -12,7 +16,10 @@ function RoundedToggle({ id, isOn, handleToggle }: { id: string, isOn: boolean, 
                 className="toggle__checkbox" 
                 id={id} 
             />
-            <label className="toggle__label" htmlFor={id}>
+            <label 
+                className="toggle__label" 
+                htmlFor={id}
+            >
                 <span className="toggle__slider"></span>
             </label>
         </div>

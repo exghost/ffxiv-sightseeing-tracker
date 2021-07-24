@@ -16,8 +16,8 @@
     justify-content: space-between;
     cursor: pointer;
     width: 4rem;
-    height: 2.5rem;
-    background-color: gray;
+    height: 2.6rem;
+    background-color: #D00;
     border-radius: 10rem;
     position: relative;
     transition: background-color .2s;
@@ -26,8 +26,8 @@
 .toggle__label .toggle__slider {
     content: '';
     position: absolute;
-    top: .25rem;
-    left: .2rem;
+    top: .3rem;
+    left: .3rem;
     width: 2rem;
     height: 2rem;
     border-radius: 4.5rem;
@@ -37,8 +37,12 @@
 }
 
 .toggle__checkbox:checked + .toggle__label .toggle__slider {
-    left: calc(100% - .2rem);
+    left: calc(100% - .3rem);
     transform: translateX(-100%);
+}
+
+.toggle__checkbox:checked + .toggle__label {
+    background-color: #0A0;
 }
 
 .toggle__label:active .toggle__slider {

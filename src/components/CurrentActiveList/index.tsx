@@ -6,6 +6,7 @@ import RoundedToggle from 'components/RoundedToggle';
 
 import { getCurrentlyAvailableLogs } from 'api/sightseeingLogs';
 import './styles.css';
+import LogSection from 'components/LogSection';
 
 function CurrentActiveList() {
     const [logData, setLogData] = useState<any[]>([]);
@@ -50,16 +51,7 @@ function CurrentActiveList() {
                 </div>
                 
             </div>
-            
-        {
-            !logData.length &&
-            <div>
-                No available sights to see...
-            </div>
-        }
-        { !!logData.length &&
-            <LogList data={logData} />
-        }
+            <LogSection header="Currently Available" data={logData} />
         </div>
     )
 }

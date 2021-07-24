@@ -12,3 +12,7 @@
     border-top: .1rem solid #E7E7E7;
     border-spacing: 0;
 }
+
+.current-active-list__options__show {
+    padding-top: .5rem;
+}

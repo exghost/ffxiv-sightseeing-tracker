@@ -9,7 +9,7 @@ function Header() {
     return (
         <nav className="header">
             <h1 className="heading header__heading">
-                FFXIV Sightseeing Tracker
+                FFXIV Sights
             </h1>
             <div className="header__clock-container">
                 <Clock label="Eorzea" timeClass={EorzeaTime} />

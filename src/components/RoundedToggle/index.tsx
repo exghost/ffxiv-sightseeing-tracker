@@ -1,13 +1,21 @@
 import React from 'react';
 
-function RoundedToggle() {
+import './styles.css';
+
+function RoundedToggle({ id, isOn, handleToggle }: { id: string, isOn: boolean, handleToggle: any }) {
     return (
-        <>
-            <input type="checkbox" className="toggle__checkbox" />
-            <label className="toggle__label">
+        <div className="toggle">
+            <input 
+                checked={isOn}
+                onChange={handleToggle}
+                type="checkbox" 
+                className="toggle__checkbox" 
+                id={id} 
+            />
+            <label className="toggle__label" htmlFor={id}>
                 <span className="toggle__slider"></span>
             </label>
-        </>
+        </div>
 
     )
 }

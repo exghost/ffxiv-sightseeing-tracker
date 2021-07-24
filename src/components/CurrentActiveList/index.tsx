@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react';
 import EorzeaTime from 'eorzea-time';
 
 import LogList from 'components/LogList';
+import RoundedToggle from 'components/RoundedToggle';
 
 import { getCurrentlyAvailableLogs } from 'api/sightseeingLogs';
-import './CurrentActiveList.css';
+import './styles.css';
 
 function CurrentActiveList() {
     const [logData, setLogData] = useState<any[]>([]);
     const [currentHour, setCurrentHour] = useState(0);
+    const [show20, setShow20] = useState(true);
+    const [show60, setShow60] = useState(true);
 
     useEffect(() => {
         setInterval(() => {
@@ -18,11 +21,36 @@ function CurrentActiveList() {
     }, [])
 
     useEffect(() => {
-        setLogData(getCurrentlyAvailableLogs());
-    }, [currentHour]);
+        let logData = getCurrentlyAvailableLogs();
+        if(!show20) logData = logData.filter((log) => log.number > 20);
+        if(!show60) logData = logData.filter((log) => !(log.number > 20 && log.number <= 80));
+
+        setLogData(logData);
+    }, [currentHour, show20, show60]);
 
     return (
         <div>
+            <div className="current-active-list__options">
+                <div className="current-active-list__options__show current-active-list__options__show20">
+                    <RoundedToggle
+                        id="show20"
+                        isOn={show20}
+                        handleToggle={() => setShow20(!show20)}
+                    /> 
+                    <span className="current-active-list__options__label">
+                        Show first 20
+                    </span>
+                </div>
+                <div className="current-active-list__options__show current-active-list__options__show60">
+                    <RoundedToggle
+                        id="show60"
+                        isOn={show60}
+                        handleToggle={() => setShow60(!show60)}
+                    /> Show last 60
+                </div>
+                
+            </div>
+            
         {
             !logData.length &&
             <div>
@@ -37,57 +65,3 @@ function CurrentActiveList() {
 }
 
 export default CurrentActiveList;
-
-/*
-        <table className="current-active-list">
-            <thead className="current-active-list__head">
-                <tr className="current-active-list__head__row">
-                    <td className="current-active-list__head__cell">
-                        No.
-                    </td>
-                    <td className="current-active-list__head__cell">
-                        Name
-                    </td>
-                    <td className="current-active-list__head__cell">
-                        Zone
-                    </td>
-                    <td className="current-active-list__head__cell">
-                        Coordinates
-                    </td>
-                    <td className="current-active-list__head__cell">
-                        Emote
-                    </td>
-                    <td className="current-active-list__head__cell">
-                        Weather
-                    </td>
-                    <td className="current-active-list__head__cell">
-                        Time
-                    </td>
-                    <td className="current-active-list__head__cell">
-                        Notes
-                    </td>
-                </tr>
-            </thead>
-            { logData.map((log) => (
-                    <tr key={log.number} className="current-active-list__body__row">
-                        <td className="current-active-list__body__cell">{log.number}</td>
-                        <td className="current-active-list__body__cell">{log.name}</td>
-                        <td className="current-active-list__body__cell">{log.zone}</td>
-                        <td className="current-active-list__body__cell">{log.coords}</td>
-                        <td className="current-active-list__body__cell">
-                            {log.emote}
-                        </td>
-                        <td className="current-active-list__body__cell">{
-                            log.weather.join(', ')
-                        }</td>
-                        <td className="current-active-list__body__cell"> 
-                            {`${log.startTime.toString()} - ${log.endTime.toString()}`}
-                        </td>
-                        <td className="current-active-list__body__cell">
-                            {log.comment}
-                        </td>
-                    </tr>
-                ))
-            }
-        </table>
-*/

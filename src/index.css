@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+:root {
+  --font-color-primary: #e7e7e7;
+  --color-primary: #444;
+}
+
 *,
 *::after,
 *::before {
@@ -11,10 +18,10 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   box-sizing: border-box;
-  background-color: #444;
-  color: #EDEDED;
+  background-color: var(--color-primary);
+  color: var(--font-color-primary);
 }

@@ -53,7 +53,7 @@ const data = {
             "imgPath": "https://static.wikia.nocookie.net/finalfantasy/images/c/cd/FFXIV_Weather_Thunder_icon.png"
         },
         {
-            "name": "Thunder",
+            "name": "Thunderstorms",
             "imgPath": "https://static.wikia.nocookie.net/finalfantasy/images/9/98/FFXIV_Weather_Thunderstorm_icon.png"
         },
         {

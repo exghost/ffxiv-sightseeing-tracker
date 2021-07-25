@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import EorzeaTime from 'eorzea-time';
 
-import LogList from 'components/LogList';
 import RoundedToggle from 'components/RoundedToggle';
 
 import { getCurrentlyAvailableLogs } from 'api/sightseeingLogs';
@@ -31,16 +30,13 @@ function CurrentActiveList() {
 
     return (
         <div>
-            <div className="current-active-list__options">
+            <LogSection header="Currently Available" data={logData}>
                 <div className="current-active-list__options__show current-active-list__options__show20">
                     <RoundedToggle
                         id="show20"
                         isOn={show20}
                         handleToggle={() => setShow20(!show20)}
-                    /> 
-                    <span className="current-active-list__options__label">
-                        Show first 20
-                    </span>
+                    /> Show first 20
                 </div>
                 <div className="current-active-list__options__show current-active-list__options__show60">
                     <RoundedToggle
@@ -49,9 +45,7 @@ function CurrentActiveList() {
                         handleToggle={() => setShow60(!show60)}
                     /> Show last 60
                 </div>
-                
-            </div>
-            <LogSection header="Currently Available" data={logData} />
+            </LogSection>
         </div>
     )
 }

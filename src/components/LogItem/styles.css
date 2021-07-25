@@ -1,8 +1,13 @@
+.log-item {
+    margin-bottom: .5rem;
+}
+
 .log-item__header {
-    background-color: #DA0037;
-    border-bottom: solid #E7E7E7;
+    background-color: #353535;
     display: flex;
     justify-content: stretch;
+    cursor: pointer;
+    padding-bottom: 1rem;
 }
 
 .log-item__header--number {
@@ -36,6 +41,7 @@
 .log-item__body {
     padding: 3rem;
     list-style: none;
+    background-color: #444;
 }
 
 .log-item__body--item {

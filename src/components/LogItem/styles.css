@@ -2,7 +2,7 @@
     background-color: #DA0037;
     border-bottom: solid #E7E7E7;
     display: flex;
-    justify-content: flex-start;
+    justify-content: stretch;
 }
 
 .log-item__header--number {
@@ -21,7 +21,8 @@
 .log-item__header--location {
     padding-top: 1rem;
     padding-right: 2rem;
-    margin-left: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .log-item__header--location__zone {
@@ -32,3 +33,38 @@
     font-size: 75%;
 }
 
+.log-item__body {
+    padding: 3rem;
+    list-style: none;
+}
+
+.log-item__body--item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.log-item__body--label {
+    font-weight: 700;
+    padding-right: .5rem;
+    width: 20rem;
+}
+
+.log-item__body--weather-image {
+    width: 5rem;
+    padding-right: 1rem;
+}
+
+.log-item__body__notes--label {
+    display: block;
+}
+
+.log-item__body__notes--content {
+    display: block;
+    border: solid #E7E7E7;
+    padding: 1rem;
+    width: 100%;
+    background-color: #333;
+    box-shadow: #000 1rem;
+}

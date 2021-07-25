@@ -16,8 +16,12 @@ function LogSection(props: Props) {
             <h3 className="log-section__header">
                 <span className="log-section__header__content">{ props.header }</span>
             </h3>
+        { props.children &&
             <div className="log-section__filters">
+                <h5 className="log-section__filters--header">Filters</h5>
+                { props.children }
             </div>
+        }
             
         {
             !props.data.length &&

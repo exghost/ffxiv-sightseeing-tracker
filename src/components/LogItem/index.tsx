@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import './styles.css';
 
 import { getWeatherImg } from 'api/weatherImgs';
+import { SightseeingLog } from 'db/SightseeingData.types';
 
-function LogItem({ data }: { data: any }) {
+function LogItem({ data }: { data: SightseeingLog }) {
     const [active, setActive] = useState(false);
 
     function toggleActive() {

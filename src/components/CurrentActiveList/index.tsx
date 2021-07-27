@@ -4,11 +4,13 @@ import EorzeaTime from 'eorzea-time';
 import RoundedToggle from 'components/RoundedToggle';
 
 import { getCurrentlyAvailableLogs } from 'api/sightseeingLogs';
+import { SightseeingLog } from 'db/SightseeingData.types';
 import './styles.css';
 import LogSection from 'components/LogSection';
 
+
 function CurrentActiveList() {
-    const [logData, setLogData] = useState<any[]>([]);
+    const [logData, setLogData] = useState<SightseeingLog[]>([]);
     const [currentHour, setCurrentHour] = useState(0);
     const [show20, setShow20] = useState(true);
     const [show60, setShow60] = useState(true);

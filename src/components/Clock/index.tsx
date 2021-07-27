@@ -4,9 +4,9 @@ import './Clock.css';
 
 
 
-function Clock({ label, timeClass }: { label: String, timeClass: any }) {
+function Clock({ label, timeClass }: { label: string, timeClass: any }) {
 
-    const getFormattedTime = () : String => {
+    const getFormattedTime = () : string => {
         let time = new timeClass();
         let hours = time.getHours();    
         let minutes = `0${time.getMinutes()}`.slice(-2);

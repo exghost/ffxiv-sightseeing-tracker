@@ -3,10 +3,11 @@ import React from 'react';
 import LogList from 'components/LogList';
 
 import './styles.css';
+import { SightseeingLog } from 'db/SightseeingData.types';
 
 type Props = {
     header: string,
-    data: any[],
+    data: SightseeingLog[],
     children?: JSX.Element | JSX.Element[];
 }
 

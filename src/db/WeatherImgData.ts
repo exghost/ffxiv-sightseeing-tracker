@@ -1,4 +1,6 @@
-const data = {
+import { WeatherImgData } from './WeatherImgData.types';
+
+const data: WeatherImgData = {
     "weatherImgs": [
         {
             "name": "Blizzards",

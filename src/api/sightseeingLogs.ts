@@ -1,14 +1,15 @@
 import EorzeaTime from 'eorzea-time';
 import EorzeaWeather from 'eorzea-weather';
 
-import data from 'db/sightseeing_data';
+import data from 'db/SightseeingData';
+import { SightseeingLog } from 'db/SightseeingData.types';
 
 
-export function getAllLogs(): any[] {
+export function getAllLogs(): SightseeingLog[] {
     return data.logs;
 }
 
-export function getCurrentlyAvailableLogs(): any[] {
+export function getCurrentlyAvailableLogs(): SightseeingLog[] {
     const time = new EorzeaTime();
     const hour = time.getHours();
     const logs = data.logs;
@@ -30,7 +31,7 @@ export function getCurrentlyAvailableLogs(): any[] {
     return currentLogsByTimeAndWeather;
 }
 
-export function getUniqueTimes(): any[] {
+export function getUniqueTimes(): number[] {
     const logs = data.logs;
 
     const startTimes = logs.map((log) => log.startTime);

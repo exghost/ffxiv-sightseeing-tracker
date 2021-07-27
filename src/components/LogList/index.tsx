@@ -1,11 +1,17 @@
-import LogItem from 'components/LogItem';
 import React from 'react';
 
-function LogList(props: any) {
+import LogItem from 'components/LogItem';
+import { SightseeingLog } from 'db/SightseeingData.types';
+
+type Props = {
+    data: SightseeingLog[]
+}
+
+function LogList(props: Props) {
     return (
         <ul className="log-list">
             { !!props.data?.length &&
-                props.data.map((item: any) => (
+                props.data.map((item) => (
                     <LogItem data={item} />
                 ))
             }

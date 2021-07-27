@@ -1,4 +1,6 @@
-const data = {
+import { SightseeingLogData } from "./SightseeingData.types";
+
+const data: SightseeingLogData = {
     "logs": [
         {
             "number": 1,
@@ -1251,6 +1253,6 @@ const data = {
             "comment": "/sit on top of tree. Climb the back of the red metallic wreckage near a smaller red cylinder. Walk up and jump on small metal rib. From there jump onto back of Big broken red metallic hull. It's also possible, with maximum mount speed, to jump from the branch of the next-closest tree."
         },
     ]
-}
+};
 
 export default data;

@@ -10,6 +10,10 @@
     padding-bottom: 1rem;
 }
 
+.log-item__header:hover {
+    background-color: #444;
+}
+
 .log-item__header--number {
     font-size: 1.5rem;
     padding-left: .5rem;

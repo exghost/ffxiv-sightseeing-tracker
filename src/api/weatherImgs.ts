@@ -1,4 +1,4 @@
-import data from 'db/weather_img';
+import data from 'db/WeatherImgData';
 
 
 export const getWeatherImg = (weather: string): string => {

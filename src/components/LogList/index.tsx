@@ -12,7 +12,7 @@ function LogList(props: Props) {
         <ul className="log-list">
             { !!props.data?.length &&
                 props.data.map((item) => (
-                    <LogItem data={item} />
+                    <LogItem data={item} key={item.number} />
                 ))
             }
         </ul>

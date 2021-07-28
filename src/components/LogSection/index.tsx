@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import LogList from 'components/LogList';
 
@@ -12,17 +12,32 @@ type Props = {
 }
 
 function LogSection(props: Props) {
+    const baseFilterClass = 'log-section__filters--content';
+    const hideFilterClass = 'log-section__filters--content--hidden';
+    const [filterClasses, setFilterClasses] = useState(`${baseFilterClass} ${hideFilterClass}`);
+
+    const toggleFilterClasses = () => {
+        if(filterClasses === baseFilterClass) {
+            setFilterClasses(`${baseFilterClass} ${hideFilterClass}`);
+        } else {
+            setFilterClasses(baseFilterClass);
+        }
+    }
+
     return (
         <div className="log-section">
-            <h3 className="log-section__header">
-                <span className="log-section__header__content">{ props.header }</span>
-            </h3>
-        { props.children &&
-            <div className="log-section__filters">
-                <h5 className="log-section__filters--header">Filters</h5>
-                { props.children }
+            <div className="log-section__header">
+                <h3 className="log-section__header__content">{ props.header }</h3>
+            
+            { props.children &&
+                <div className="log-section__filters">
+                    <h5 className="log-section__filters--header" onClick={toggleFilterClasses}>Filters</h5>
+                    <div className={filterClasses}>
+                        { props.children }
+                    </div>
+                </div>
+            }
             </div>
-        }
             
         {
             !props.data.length &&
